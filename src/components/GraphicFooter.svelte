@@ -11,6 +11,9 @@
       display: grid;
       grid-column-gap: 5px;
       grid-template-columns: 1fr;
+
+      margin-bottom: 150px;
+      border-bottom: none;
    }
 
    #footer-logo img, #footer-logo svg {
@@ -20,6 +23,7 @@
    @media screen and (min-width: 600px) {
       #graphic-footer {
          grid-template-columns: 4fr 1fr;
+
       }
 
       #footer-logo img, #footer-logo svg {
@@ -44,6 +48,16 @@
       fill: #000;
    }
 
+   @media screen and (max-width: 750px) {
+
+      #graphic-footer {
+         /* display: grid;
+         grid-column-gap: 5px;
+         grid-template-columns: 1fr; */
+
+         margin-bottom: 350px;
+      }
+}
 
 
 
