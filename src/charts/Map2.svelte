@@ -482,10 +482,10 @@ mapRef.setFeatureState(
 
 
 
+console.log(newActiveMapItem)
 
 
-
-if(newActiveMapItem != 21){
+if(newActiveMapItem <= 9){
   mapRef.flyTo({
     center: listItems[newActiveMapItem].coordinates,
     zoom: 13
@@ -501,10 +501,9 @@ if(newActiveMapItem != 21){
 }
 else{
   mapRef.flyTo({
-  center: [-71.0589, 42.32061],
-zoom: 11
-    // ,
-    // zoom: 13,
+    // center: listItems[newActiveMapItem].coordinates,
+    center: [-71.0589, 42.32061],
+    zoom: 10
     // bearing: 0
 //
 //     // These options control the flight curve, making it move
@@ -515,6 +514,23 @@ zoom: 11
 
   });
 }
+// }
+// else{
+//   mapRef.flyTo({
+//   center: [-71.0589, 42.32061],
+// zoom: 11
+//     // ,
+//     // zoom: 13,
+//     // bearing: 0
+// //
+// //     // These options control the flight curve, making it move
+// // // slowly and zoom out almost completely before starting
+// // // to pan.
+// // speed: 0.8, // make the flying slow
+// // curve: 1 // change the speed at which it zooms out
+//
+//   });
+// }
 //
 //   mapRef.flyTo({
 //     center: listItems[newActiveMapItem].coordinates,

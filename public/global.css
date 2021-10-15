@@ -30,10 +30,12 @@ body.dev-index footer {
 }
 
 
-.article-content{
-	padding: 0;
-	margin:0;
+.article-content {
+  z-index: 0;
+  margin: 0;
+  padding: 0;
 }
+
 
 .article-body {
     max-width: 1150px;

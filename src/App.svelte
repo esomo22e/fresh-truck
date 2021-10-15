@@ -94,7 +94,21 @@ src = "//news.northeastern.edu/interactive/2020/10/campus-construction-2020/phot
   /* z-index: -1; */
   max-height: 100vh;
 
+
 }
+
+/* Cover the map pane to prevent direct user intereaction. */
+.pane.right::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+}
+
+
 .map-legend{
 position: absolute;
 z-index: 1;
@@ -185,6 +199,7 @@ margin: 10px 10px 0;
 
 
 }
+
 /*
   :global(.marker) {
 	display: block;

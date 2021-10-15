@@ -1,5 +1,5 @@
 <style>
-  #list-items {
+#list-items-container{
     display: flex;
     flex-wrap: wrap;
     overflow-y: scroll;
@@ -7,11 +7,33 @@
 /* margin-left: 50%; */
   }
 
-  .list-item {
+.list-wrapper .list-item{
+    /* margin-top:10px; */
+    /* position:relative;  */
+    padding:0;
+min-height: 0;
+    margin: 0;
+    display: block;
+  }
+
+  .list-wrapper .list-content{
+    color: #000;
+    background: none;
+    text-shadow: none;
+    padding: 30px;
+    /* margin: 0 auto !important; */
+  }
+
+  .list-wrapper .list-title{
+    font-size: 2.5em;
+
+  }
+/* #list-items-container section.list-item:nth-child(n-12) { */
+.list-item{
     font-size: 1.2em;
     line-height: 1.5em;
     width: 100%;
-    height: 100%;
+    /* height: auto; */
     padding: 132px;
     /* height: 100%; */
     /* margin: 40px 40px; */
@@ -21,6 +43,11 @@
     margin-top: 0;
 
 
+
+    min-height: 676px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
     /* opacity: 0; */
     /* padding-bottom: 50vh; */
   }
@@ -105,14 +132,54 @@ video{
       font-size: 1.35rem;
 
   }
-  .tail-content{
-    height: 50px;
-  }
 
-.list-item:last-child{
+/* .list-item:last-child{
     margin-bottom: 80px;
     border-bottom: none;
-  }
+  } */
+
+  .red-line {
+  background:#FF4949;
+  /* background: #000; */
+  z-index:-1;
+  width:5px;
+  height:100%;
+  position:absolute;
+  left:15px;
+}
+
+.list-wrapper {
+  position:relative;
+  width: 100%;
+}
+.list-item-wrapper {
+  margin-top:10px;
+  position:relative;
+}
+.list-bullet {
+  float:left;
+  margin-right:20px;
+  background:#FF4949;
+  /* background: #000; */
+  height:30px;
+  width:30px;
+  line-height:30px;
+  border-radius:50%;
+  font-weight:700;
+  color:white;
+  text-align:center;
+}
+.list-item {
+  /* display:table-row;
+  vertical-align:middle; */
+}
+.list-title {
+    font-weight:700;
+}
+.list-text {
+    font-weight:400;
+}
+
   /* .wrapper{
     padding: 0 40px;
   } */
@@ -149,10 +216,10 @@ video{
       margin: 0;
       padding: 10px;
     } */
-    .list-item:last-child{
+    /* .list-item:last-child{
         margin-bottom: 200px;
         border-bottom: none;
-      }
+      } */
 
     .list-item{
       margin: 0;
@@ -190,6 +257,10 @@ line-height: 1.25em;
 
   }
 
+  .list-wrapper .list-title{
+    font-size: 1.7rem;
+  }
+
   /* .tail-content{
     height: 300px;
   } */
@@ -218,11 +289,21 @@ line-height: 1.25em;
       const visibleListItems = Array.from(
         document.getElementsByClassName('list-item')
       ).map(inView.is);
+
+
       // If it's a new one, update active list item
       const topMostVisible = visibleListItems.indexOf(true);
       if (topMostVisible !== -1) {
         activeMapItem.set(topMostVisible);
       }
+      // const visibleListItems1 = Array.from(
+      //   document.getElementsByClassName('list-wrapper-list')
+      // ).map(inView.is);
+      // const topMostVisible1 = visibleListItems1.indexOf(true);
+      // console.log(topMostVisible1)
+      // if (topMostVisible1 !== -1) {
+      //   activeMapItem.set(topMostVisible1);
+      // }
     });
   });
 
@@ -240,14 +321,15 @@ line-height: 1.25em;
   // Remove listener on unmount
   onDestroy(unsubscribeActiveListItem);
 </script>
-<div id="list-items" bind:this="{listRef}">
-<div class="head">
+<div id="list-items-container" bind:this="{listRef}">
+<div>
 
   <!-- <h1>Fresh Truck Mobile Market</h1> -->
 
 </div>
 
   {#each listItems as listItem, index}
+  {#if listItem.id <= 10}
 
     <section class="list-item" id="list-item-{index}">
 
@@ -271,11 +353,43 @@ line-height: 1.25em;
         </div>
        {/if}
     </section>
-  {/each}
-  <GraphicFooter
+    {:else}
+    <!-- <section class="list-item" id="list-item-text-{index}" >
+    <div class="red-line"></div>
+    <div class="list-bullet">1</div>
+
+    <div class = "list-content">
+    <div class = "list-title">{listItem.name}</div>
+    <div class = "list-day">{listItem.day}</div>
+      <div class = "list-desc">{listItem.description}</div>
+      </div>
+    </section> -->
+    <!-- <section class="list-item" id="list-item-text-{index}" > -->
+    <div class="list-wrapper">
+    <div class="red-line"></div>
+    <!-- <section class="list-item-wrapper" id="list-item-{index}"> -->
+  <section class="list-item" id="list-item-{index}">
+        <!-- <div class="list-bullet">{listItem.id}</div>
+         -->
+         <div class="list-bullet"></div>
+
+        <div class="list-content">
+        <div class="list-title">{listItem.name}</div>
+        <div class = "list-day">{listItem.day}</div>
+
+        </div>
+    </section>
+</div>
+
+<!-- </section> -->
+   {/if}
+    {/each}
+
+
+  <!-- <GraphicFooter
   	source={'<a href="https://www.aboutfresh.org/fresh-truck/">Fresh Truck Mobile Market</a>'}
   	credit={'Eunice/Northeastern University'}
-  />
+  /> -->
 
   <!-- <div class="tail">
   <div class = "tail-content"></div>
