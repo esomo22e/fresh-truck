@@ -254,7 +254,7 @@ line-height: 1.25em;
     // Set a nicer offset so it's not a hard cutoff
     inView.offset(200);
 
-    listRef.addEventListener('scroll', function() {
+    document.querySelector("body").addEventListener('scroll', function() {
       // Active list item is top-most fully-visible item
       const visibleListItems = Array.from(
         document.getElementsByClassName('list-item')
@@ -266,14 +266,7 @@ line-height: 1.25em;
       if (topMostVisible !== -1) {
         activeMapItem.set(topMostVisible);
       }
-      // const visibleListItems1 = Array.from(
-      //   document.getElementsByClassName('list-wrapper-list')
-      // ).map(inView.is);
-      // const topMostVisible1 = visibleListItems1.indexOf(true);
-      // console.log(topMostVisible1)
-      // if (topMostVisible1 !== -1) {
-      //   activeMapItem.set(topMostVisible1);
-      // }
+
     });
   });
 
@@ -281,7 +274,7 @@ line-height: 1.25em;
   const unsubscribeActiveListItem = activeListItem.subscribe(
     newActiveListItem => {
       if (listRef) {
-        listRef.scrollTop = document.getElementById(
+          listRef.scrollTop = document.getElementById(
           `list-item-${newActiveListItem}`
         ).offsetTop;
       }
@@ -292,6 +285,8 @@ line-height: 1.25em;
   onDestroy(unsubscribeActiveListItem);
 </script>
 <div id="list-items-container" bind:this="{listRef}">
+
+{listRef}
 <div class = "hed"></div>
 
   {#each listItems as listItem, index}
