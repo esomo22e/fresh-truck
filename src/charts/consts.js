@@ -54,7 +54,7 @@ export const listItems = [
             description: "What drives Fresh Truck employees like Matta? “It's very community oriented. All over the city, you can see that everyone's very tight knit with the company. It's so satisfying,” says Matta.",
             coordinates: [-71.0440424522399,42.28640296150111],
             image: '//news.northeastern.edu/interactive/2021/09/fresh-truck/images/fresh_truck_img_3.JPG',
-            video: '',
+            video: '//news.northeastern.edu/interactive/2021/09/fresh-truck/videos/fresh_truck_ame.mp4',
             time: ''
         },
           {
@@ -84,7 +84,7 @@ export const listItems = [
                 description: "Owners of About Fresh have since expanded the Fresh Connect program, meant to provide a holistic approach to well being. Healthcare centers can now hand out Fresh Connect debit cards that can be used for produce in most any supermarket as well as the Fresh Trucks.",
                 coordinates: [ -71.13663252895341,42.277082344758874],
                 image: '//news.northeastern.edu/interactive/2021/09/fresh-truck/images/fresh_truck_img_11.JPG',
-                video: '',
+                video: '//news.northeastern.edu/interactive/2021/09/fresh-truck/videos/fresh_truck_ymca.mp4',
                 time: ''
             },
             {

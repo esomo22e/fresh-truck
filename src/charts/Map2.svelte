@@ -253,33 +253,33 @@ mapRef.addSource('multiple-lines-route', {
 
 
 
-mapRef.on('mousemove', 'routes', (e) => {
-  if (e.features.length > 0) {
-    if (hoveredStateId !== null) {
-        mapRef.setFeatureState(
-        { source: 'multiple-lines-route', id: hoveredStateId },
-        { hover: false }
-        );
-    }
-        hoveredStateId = e.features[0].id;
-
-        mapRef.setFeatureState(
-        { source: 'multiple-lines-route', id: hoveredStateId },
-        { hover: true }
-        );
-  }
-});
-
-mapRef.on('mouseleave', 'routes', () => {
-if (hoveredStateId !== null) {
-      mapRef.setFeatureState(
-      { source: 'multiple-lines-route', id: hoveredStateId },
-      { hover: false }
-);
-}
-hoveredStateId = null;
-
-});
+// mapRef.on('mousemove', 'routes', (e) => {
+//   if (e.features.length > 0) {
+//     if (hoveredStateId !== null) {
+//         mapRef.setFeatureState(
+//         { source: 'multiple-lines-route', id: hoveredStateId },
+//         { hover: false }
+//         );
+//     }
+//         hoveredStateId = e.features[0].id;
+//
+//         mapRef.setFeatureState(
+//         { source: 'multiple-lines-route', id: hoveredStateId },
+//         { hover: true }
+//         );
+//   }
+// });
+//
+// mapRef.on('mouseleave', 'routes', () => {
+// if (hoveredStateId !== null) {
+//       mapRef.setFeatureState(
+//       { source: 'multiple-lines-route', id: hoveredStateId },
+//       { hover: false }
+// );
+// }
+// hoveredStateId = null;
+//
+// });
 
 
       listItems.forEach(function(marker, i) {
@@ -422,47 +422,78 @@ mapRef.setFeatureState(
 
 }
 
-if(listItems[newActiveMapItem].day === "Thursday"|| listItems[newActiveMapItem].day ==="Thursday, Friday"){
+///These are the lists and they will scroll down the list
+// if(listItems[newActiveMapItem].day === "Thursday"|| listItems[newActiveMapItem].day ==="Thursday, Friday"){
+// mapRef.setFeatureState(
+// { source: 'multiple-lines-route', id: 4 },
+// { hover: true }
+// );
+// }
+// else{
+// mapRef.setFeatureState(
+// { source: 'multiple-lines-route', id: 4 },
+// { hover: false }
+// );
+//
+// }
+
+if(listItems[newActiveMapItem].id > 10){
 mapRef.setFeatureState(
 { source: 'multiple-lines-route', id: 4 },
 { hover: true }
 );
-}
-else{
-mapRef.setFeatureState(
-{ source: 'multiple-lines-route', id: 4 },
-{ hover: false }
-);
-
-}
-
-if(listItems[newActiveMapItem].day === "Friday" || listItems[newActiveMapItem].day ==="Thursday, Friday"){
 mapRef.setFeatureState(
 { source: 'multiple-lines-route', id: 5 },
 { hover: true }
-);
-}
-else{
-mapRef.setFeatureState(
-{ source: 'multiple-lines-route', id: 5 },
-{ hover: false }
-);
-
-}
-
-if(listItems[newActiveMapItem].day === "Saturday" ||  listItems[newActiveMapItem].day === "Monday, Saturday"){
-mapRef.setFeatureState(
+);mapRef.setFeatureState(
 { source: 'multiple-lines-route', id: 6 },
 { hover: true }
 );
 }
 else{
 mapRef.setFeatureState(
+{ source: 'multiple-lines-route', id: 4 },
+{ hover: false }
+);
+mapRef.setFeatureState(
+{ source: 'multiple-lines-route', id: 5 },
+{ hover: false }
+);
+mapRef.setFeatureState(
 { source: 'multiple-lines-route', id: 6 },
 { hover: false }
 );
-
 }
+//
+// if(listItems[newActiveMapItem].day === "Friday" || listItems[newActiveMapItem].day ==="Thursday, Friday"){
+// mapRef.setFeatureState(
+// { source: 'multiple-lines-route', id: 5 },
+// { hover: true }
+// );
+// }
+// else{
+// mapRef.setFeatureState(
+// { source: 'multiple-lines-route', id: 5 },
+// { hover: false }
+// );
+//
+// }
+//
+// if(listItems[newActiveMapItem].day === "Saturday" ||  listItems[newActiveMapItem].day === "Monday, Saturday"){
+// mapRef.setFeatureState(
+// { source: 'multiple-lines-route', id: 6 },
+// { hover: true }
+// );
+// }
+// else{
+// mapRef.setFeatureState(
+// { source: 'multiple-lines-route', id: 6 },
+// { hover: false }
+// );
+//
+// }
+
+
     // let arrayofIds = [1,2];
     // mapRef.setPaintProperty('routes', 'line-opacity', ['match', ['get', 'id'], arrayofIds, 1.0,
     // 0.5 ])
@@ -503,7 +534,7 @@ else{
   mapRef.flyTo({
     // center: listItems[newActiveMapItem].coordinates,
     center: [-71.0589, 42.32061],
-    zoom: 10
+    zoom: 11
     // bearing: 0
 //
 //     // These options control the flight curve, making it move

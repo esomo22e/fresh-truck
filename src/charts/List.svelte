@@ -20,8 +20,15 @@ min-height: 0;
     color: #000;
     background: none;
     text-shadow: none;
-    padding: 30px;
+    padding: 0px;
+    margin: 10px 40px auto !important;
+
+    /* padding: 30px; */
     /* margin: 0 auto !important; */
+  }
+
+  .list-wrapper .list-day{
+    margin: 5px 15px;
   }
 
   .list-wrapper .list-title{
@@ -150,7 +157,9 @@ video{
 
 .list-wrapper {
   position:relative;
-  width: 100%;
+  /* width: 100%; */
+  width: 70%;
+  margin: 0 auto;
 }
 .list-item-wrapper {
   margin-top:10px;
@@ -267,7 +276,9 @@ line-height: 1.25em;
 
   }
 
-
+  .list-wrapper {
+      width: 90%;
+}
 </style>
 
 <script>
