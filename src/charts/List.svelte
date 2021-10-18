@@ -254,7 +254,7 @@ line-height: 1.25em;
     // Set a nicer offset so it's not a hard cutoff
     inView.offset(200);
 
-    document.querySelector("body").addEventListener('scroll', function() {
+    window.addEventListener('scroll', function() {
       // Active list item is top-most fully-visible item
       const visibleListItems = Array.from(
         document.getElementsByClassName('list-item')
@@ -286,7 +286,6 @@ line-height: 1.25em;
 </script>
 <div id="list-items-container" bind:this="{listRef}">
 
-{listRef}
 <div class = "hed"></div>
 
   {#each listItems as listItem, index}
