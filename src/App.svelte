@@ -60,10 +60,10 @@ src = "//news.northeastern.edu/interactive/2020/10/campus-construction-2020/phot
 
 <style>
 .container {
-  height: 100vh;
+  /* height: 100vh; */
   display: flex;
   flex-flow: wrap-reverse;
-  overflow-y: hidden;
+  /* overflow-y: hidden; */
    margin: 0;
    max-width: 100%;
    padding: 0;
@@ -71,7 +71,7 @@ src = "//news.northeastern.edu/interactive/2020/10/campus-construction-2020/phot
 
 .pane {
   display: flex;
-  overflow-y: hidden;
+  /* overflow-y: hidden; */
 }
 
 .left {
@@ -79,7 +79,7 @@ src = "//news.northeastern.edu/interactive/2020/10/campus-construction-2020/phot
   width: 60%;
   justify-content: center;
   z-index:1000;
-  max-height: 100vh;
+  /* max-height: 100vh; */
   flex-direction: column;
 
 
@@ -88,11 +88,26 @@ src = "//news.northeastern.edu/interactive/2020/10/campus-construction-2020/phot
 .right {
   justify-content: space-between;
   width: 40%;
-  display: block;
+  height: 100vh;
+  /* max-height: 100vh; */
+  /* display: block; */
   /* margin-left: 50%; */
 
   /* z-index: -1; */
-  max-height: 100vh;
+  /* max-height: 100vh; */
+  /* max-height: auto; */
+
+  position: sticky;
+  top: 0;
+
+  align-self: flex-end;
+  --article-progress--height: 62px;
+    max-height: calc(100vh - var(--article-progress--height));
+    align-self: flex-end;
+  /* --article-progress--width:62px;
+   max-height: calc(100vh - var(--article-progress--width));
+   position: sticky;
+   top: var(--article-progress--width); */
 
 
 }
@@ -216,7 +231,7 @@ margin: 10px 10px 0;
 	.left {
 		width: 100%;
 		z-index: 0;
-		max-height: 60vh;
+		height: 60vh;
 
 	}
 
@@ -385,7 +400,7 @@ border-radius: 20px;
 	<div class="cell-label">Wednesday</div>
 
   </div>
-  <div class="legendCells">
+  <!-- <div class="legendCells">
 	<div id = "cell-square" class="cell4"></div>
 	<div class="cell-label">Thursday</div>
 
@@ -399,7 +414,7 @@ border-radius: 20px;
 	<div id = "cell-square" class="cell6"></div>
 	<div class="cell-label">Saturday</div>
 
-  </div>
+  </div> -->
 </div>
 	</div>
 

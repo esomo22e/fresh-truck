@@ -63,7 +63,7 @@ export const listItems = [
                 name: "Family Nurturing Center/ Bowdoin Street Health Center",
                 description: "Josh Trautwein, a Northeastern graduate and co-creator of About Fresh, got the idea for the mobile produce market while working as a nutritionist at the Massachusetts General Hospital Charlestown Health Care Center. Patients at the health center struggled to find easy access to healthy food because the only major grocery store nearby was undergoing renovations.",
                 coordinates: [-71.06871380011701,42.30530883889362],
-                image: '//news.northeastern.edu/interactive/2021/09/fresh-truck/images/fresh_truck_img_4.JPG',
+                image: '//news.northeastern.edu/interactive/2021/09/fresh-truck/images/fresh_truck_img_3.JPG',
                 video: '',
                 time: ''
             },
@@ -73,7 +73,7 @@ export const listItems = [
                 name: "ABCD Mattapan",
                 description: "The popularity of the mobile fruit and vegetable market spurred About Fresh’s co-creators to expand their services, paving the way for a program called Fresh Connect. Originally, doctors at Brigham and Women’s Faulkner Hospital in Jamaica Plain were encouraged to give Fresh Truck gift cards to patients diagnosed with diabetes or high blood pressure, ailments that can be improved with healthy eating.",
                 coordinates: [-71.09517739,42.26731535],
-                image: '//news.northeastern.edu/interactive/2021/09/fresh-truck/images/fresh_truck_img_18.JPG',
+                image: '//news.northeastern.edu/interactive/2021/09/fresh-truck/images/fresh_truck_img_4.JPG',
                 video: '',
                 time: ''
             },
@@ -93,7 +93,7 @@ export const listItems = [
                 name: "West Broadway BHA",
                 description: "A new, updated Fresh Connect card that can be used even at restaurants is in the works, says About Fresh co-creator Josh Trautwein. The information about the food purchased is then recorded so the card holder’s health care providers can assess whether the food patients purchased has had an impact on health.",
                 coordinates: [-71.0547828019658,42.33779494489964],
-                image: '//news.northeastern.edu/interactive/2021/09/fresh-truck/images/fresh_truck_img_12.JPG',
+                image: '//news.northeastern.edu/interactive/2021/09/fresh-truck/images/fresh_truck_img_5.JPG',
                 video: '',
                 time: ''
             },
@@ -113,114 +113,115 @@ export const listItems = [
                 name: "Mission Park Apartments",
                 description: "The mission of the Fresh Truck  is to lower healthcare costs by encouraging good habits that prevent more serious and costly conditions, says Trautwein. “We've created technology that allows healthcare to really address food insecurity in a way that hasn't been possible.” Scroll on to see more about the Fresh Truck routes throughout the rest of the week!",
                 coordinates: [-71.1097,42.3331],
-                image: '//news.northeastern.edu/interactive/2021/09/fresh-truck/images/fresh_truck_img_5.JPG',
+                image: '//news.northeastern.edu/interactive/2021/09/fresh-truck/images/fresh_truck_img_6.JPG',
 
                 video: '',
                 time: ''
-            }
-            ,
+            },
                 {
                     id: 11,
-                    day: "Wednesday",
-                    name: "ABCD Geneva",
+                    day: "",
+                    name: "",
                     description: "",
                     coordinates: [-71.07561746,42.3056148],
-                    image: '//news.northeastern.edu/interactive/2021/09/fresh-truck/images/fresh_truck_img_6.JPG',
-                    video: '',
-                    time: ''
-                },
-                {
-                    id: 12,
-                    day: "Thursday",
-                    name: "Charles St AME",
-                    description: "",
-                    coordinates: [-71.0839,42.3128],
-                    image: '//news.northeastern.edu/interactive/2021/09/fresh-truck/images/img_10.JPG',
-                    video: '//news.northeastern.edu/interactive/2021/09/fresh-truck/videos/fresh_truck_ame.mp4',
-                    time: ''
-                }
-            ,
-                {
-                    id: 13,
-                    day: "Thursday",
-                    name: "Mary Ellen McCormack BHA",
-                    description: "",
-                    coordinates: [-71.0547,42.3267],
+                    // image: '',
                     image: '//news.northeastern.edu/interactive/2021/09/fresh-truck/images/fresh_truck_img_7.JPG',
                     video: '',
                     time: ''
-                },
-                {
-                    id: 14,
-                    day: "Thursday, Friday",
-                    name: "Charlestown",
-                    description: "",
-                    coordinates: [-71.0602,42.3782],
-                    image: '//news.northeastern.edu/interactive/2021/09/fresh-truck/images/fresh_truck_img_17.JPG',
-                    video: '',
-                    time: ''
-                },
-                {
-                    id: 15,
-                    day: "Thursday",
-                    name: "Thomas Menino (Hyde Park) YMCA",
-                    description: "",
-                    coordinates: [-71.1205,42.257],
-                    image: '//news.northeastern.edu/interactive/2021/09/fresh-truck/images/fresh_truck_img_8.JPG',
-                    video: '//news.northeastern.edu/interactive/2021/09/fresh-truck/videos/fresh_truck_ymca.mp4',
-                    time: ''
-                },
-
-                {
-                    id: 16,
-                    day: "Friday",
-                    name: "Village at Brookline",
-                    description: "",
-                    coordinates: [ -71.11431108662322,42.334656175506495],
-                    image: '//news.northeastern.edu/interactive/2021/09/fresh-truck/images/fresh_truck_img_9.JPG',
-                    video: '',
-                    time: ''
-                },
-                {
-                    id: 17,
-                    day: "Friday",
-                    name: "Franklin Field BHA",
-                    description: "",
-                    coordinates: [-71.0828,42.3005],
-                    image: '//news.northeastern.edu/interactive/2021/09/fresh-truck/images/fresh_truck_img_10.JPG',
-                    video: '',
-                    time: ''
-                },
-                {
-                    id: 18,
-                    day: "Friday",
-                    name: "Lenox Camden Apartments",
-                    description: "",
-                    coordinates: [-71.0801, 42.3366],
-                    image: '//news.northeastern.edu/interactive/2021/09/fresh-truck/images/fresh_truck_img_11.JPG',
-                    video: '',
-                    time: ''
-                },
-                {
-                    id: 19,
-                    day: "Friday",
-                    name: "Villa Victoria",
-                    description: "",
-                    coordinates: [-71.0758,42.341],
-                    image: '//news.northeastern.edu/interactive/2021/09/fresh-truck/images/fresh_truck_img_16.JPG',
-                    video: '',
-                    time: ''
-                },
-                {
-                    id: 20,
-                    day: "Saturday",
-                    name: "United Housing",
-                    description: "",
-                    coordinates: [-71.0823535731307,42.316178112784726],
-                    image: '//news.northeastern.edu/interactive/2021/09/fresh-truck/images/fresh_truck_img_12.JPG',
-                    video: '',
-                    time: ''
                 }
+                // ,
+            //     {
+            //         id: 12,
+            //         day: "Thursday",
+            //         name: "Charles St AME",
+            //         description: "",
+            //         coordinates: [-71.0839,42.3128],
+            //         image: '//news.northeastern.edu/interactive/2021/09/fresh-truck/images/img_10.JPG',
+            //         video: '//news.northeastern.edu/interactive/2021/09/fresh-truck/videos/fresh_truck_ame.mp4',
+            //         time: ''
+            //     }
+            // ,
+            //     {
+            //         id: 13,
+            //         day: "Thursday",
+            //         name: "Mary Ellen McCormack BHA",
+            //         description: "",
+            //         coordinates: [-71.0547,42.3267],
+            //         image: '//news.northeastern.edu/interactive/2021/09/fresh-truck/images/fresh_truck_img_7.JPG',
+            //         video: '',
+            //         time: ''
+            //     },
+            //     {
+            //         id: 14,
+            //         day: "Thursday, Friday",
+            //         name: "Charlestown",
+            //         description: "",
+            //         coordinates: [-71.0602,42.3782],
+            //         image: '//news.northeastern.edu/interactive/2021/09/fresh-truck/images/fresh_truck_img_17.JPG',
+            //         video: '',
+            //         time: ''
+            //     },
+            //     {
+            //         id: 15,
+            //         day: "Thursday",
+            //         name: "Thomas Menino (Hyde Park) YMCA",
+            //         description: "",
+            //         coordinates: [-71.1205,42.257],
+            //         image: '//news.northeastern.edu/interactive/2021/09/fresh-truck/images/fresh_truck_img_8.JPG',
+            //         video: '//news.northeastern.edu/interactive/2021/09/fresh-truck/videos/fresh_truck_ymca.mp4',
+            //         time: ''
+            //     },
+            //
+            //     {
+            //         id: 16,
+            //         day: "Friday",
+            //         name: "Village at Brookline",
+            //         description: "",
+            //         coordinates: [ -71.11431108662322,42.334656175506495],
+            //         image: '//news.northeastern.edu/interactive/2021/09/fresh-truck/images/fresh_truck_img_9.JPG',
+            //         video: '',
+            //         time: ''
+            //     },
+            //     {
+            //         id: 17,
+            //         day: "Friday",
+            //         name: "Franklin Field BHA",
+            //         description: "",
+            //         coordinates: [-71.0828,42.3005],
+            //         image: '//news.northeastern.edu/interactive/2021/09/fresh-truck/images/fresh_truck_img_10.JPG',
+            //         video: '',
+            //         time: ''
+            //     },
+            //     {
+            //         id: 18,
+            //         day: "Friday",
+            //         name: "Lenox Camden Apartments",
+            //         description: "",
+            //         coordinates: [-71.0801, 42.3366],
+            //         image: '//news.northeastern.edu/interactive/2021/09/fresh-truck/images/fresh_truck_img_11.JPG',
+            //         video: '',
+            //         time: ''
+            //     },
+            //     {
+            //         id: 19,
+            //         day: "Friday",
+            //         name: "Villa Victoria",
+            //         description: "",
+            //         coordinates: [-71.0758,42.341],
+            //         image: '//news.northeastern.edu/interactive/2021/09/fresh-truck/images/fresh_truck_img_16.JPG',
+            //         video: '',
+            //         time: ''
+            //     },
+            //     {
+            //         id: 20,
+            //         day: "Saturday",
+            //         name: "United Housing",
+            //         description: "",
+            //         coordinates: [-71.0823535731307,42.316178112784726],
+            //         image: '//news.northeastern.edu/interactive/2021/09/fresh-truck/images/fresh_truck_img_12.JPG',
+            //         video: '',
+            //         time: ''
+            //     }
                 // ,
                 // {
                 //     id: 21,

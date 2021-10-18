@@ -2,63 +2,16 @@
 #list-items-container{
     display: flex;
     flex-wrap: wrap;
-    overflow-y: scroll;
+    overflow-y: auto;
     /* width: 50%; */
 /* margin-left: 50%; */
   }
 
-.list-wrapper .list-item{
-    /* margin-top:10px; */
-    /* position:relative;  */
-    padding:0;
-min-height: 0;
+#list-items-container .hed{
     margin: 0;
-    display: block;
-  }
-
-  .list-wrapper .list-content{
-    color: #000;
-    background: none;
-    text-shadow: none;
-    padding: 0px;
-    margin: 10px 40px auto !important;
-
-    /* padding: 30px; */
-    /* margin: 0 auto !important; */
-  }
-
-  .list-wrapper .list-day{
-    margin: 5px 15px;
-  }
-
-  .list-wrapper .list-title{
-    font-size: 2.5em;
-
-  }
-/* #list-items-container section.list-item:nth-child(n-12) { */
-.list-item{
-    font-size: 1.2em;
-    line-height: 1.5em;
-    width: 100%;
-    /* height: auto; */
-    padding: 132px;
-    /* height: 100%; */
-    /* margin: 40px 40px; */
-    /* border-bottom: #ccc dotted 4px;  */
-    /* padding-bottom: 30px; */
-    color: #000;
-    margin-top: 0;
-
-
-
-    min-height: 676px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-    /* opacity: 0; */
-    /* padding-bottom: 50vh; */
-  }
-
+    padding: 0;
+    display: none;
+}
 
 
   img {
@@ -76,7 +29,7 @@ min-height: 0;
   .list-content{
     padding: 40px;
     max-width: 58rem;
-    margin: 40px auto !important;
+    margin: 80px auto !important;
     color: #fff;
     background: rgba(0, 0, 0, 0.4); /* Black see-through */
     text-shadow: 2px 2px 8px #000;
@@ -85,6 +38,18 @@ min-height: 0;
   }
 
 
+  .list-item{
+    font-size: 1.2em;
+line-height: 1.5em;
+width: 100%;
+padding: 132px;
+color: #000;
+margin-top: 0;
+min-height: 676px;
+display: flex;
+justify-content: center;
+align-items: center;
+  }
   /* .head {
     margin: 30px 40px 0 40px;
   } */
@@ -139,15 +104,21 @@ video{
       font-size: 1.35rem;
 
   }
-
-/* .list-item:last-child{
-    margin-bottom: 80px;
-    border-bottom: none;
+  /* .tail-content{
+    height: 50px;
   } */
 
-  .red-line {
+.list-item:last-child{
+    /* margin-bottom: 80px; */
+    border-bottom: none;
+  }
+
+  a{
+    color: #ffd700;
+  }
+
+  /* .red-line {
   background:#FF4949;
-  /* background: #000; */
   z-index:-1;
   width:5px;
   height:100%;
@@ -157,9 +128,7 @@ video{
 
 .list-wrapper {
   position:relative;
-  /* width: 100%; */
-  width: 70%;
-  margin: 0 auto;
+  width: 100%;
 }
 .list-item-wrapper {
   margin-top:10px;
@@ -169,25 +138,21 @@ video{
   float:left;
   margin-right:20px;
   background:#FF4949;
-  /* background: #000; */
   height:30px;
   width:30px;
   line-height:30px;
-  border-radius:50%;
+  border-radius:100px;
   font-weight:700;
   color:white;
   text-align:center;
 }
-.list-item {
-  /* display:table-row;
-  vertical-align:middle; */
-}
+
 .list-title {
     font-weight:700;
 }
 .list-text {
     font-weight:400;
-}
+} */
 
   /* .wrapper{
     padding: 0 40px;
@@ -225,10 +190,10 @@ video{
       margin: 0;
       padding: 10px;
     } */
-    /* .list-item:last-child{
+    .list-item:last-child{
         margin-bottom: 200px;
         border-bottom: none;
-      } */
+      }
 
     .list-item{
       margin: 0;
@@ -266,19 +231,13 @@ line-height: 1.25em;
 
   }
 
-  .list-wrapper .list-title{
-    font-size: 1.7rem;
-  }
-
   /* .tail-content{
     height: 300px;
   } */
 
   }
 
-  .list-wrapper {
-      width: 90%;
-}
+
 </style>
 
 <script>
@@ -333,11 +292,7 @@ line-height: 1.25em;
   onDestroy(unsubscribeActiveListItem);
 </script>
 <div id="list-items-container" bind:this="{listRef}">
-<div>
-
-  <!-- <h1>Fresh Truck Mobile Market</h1> -->
-
-</div>
+<div class = "hed"></div>
 
   {#each listItems as listItem, index}
   {#if listItem.id <= 10}
@@ -376,21 +331,17 @@ line-height: 1.25em;
       </div>
     </section> -->
     <!-- <section class="list-item" id="list-item-text-{index}" > -->
-    <div class="list-wrapper">
-    <div class="red-line"></div>
+
     <!-- <section class="list-item-wrapper" id="list-item-{index}"> -->
   <section class="list-item" id="list-item-{index}">
-        <!-- <div class="list-bullet">{listItem.id}</div>
-         -->
-         <div class="list-bullet"></div>
+  <img src="//news.northeastern.edu/interactive/2021/09/fresh-truck/images/fresh_truck_img_7.JPG" alt=""  class = "img-list"/>
 
         <div class="list-content">
-        <div class="list-title">{listItem.name}</div>
-        <div class = "list-day">{listItem.day}</div>
+
+        <div class = "list-desc"><a href="https://www.w3.org/">Fresh Truck Mobile Market</a> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sagittis interdum sodales. Curabitur urna nunc, accumsan id leo sit amet, fringilla eleifend mauris. Ut in sagittis nibh. Donec scelerisque, quam eu ultrices congue, tellus turpis gravida eros, eget interdum massa mauris nec leo. Nunc vel magna nec odio efficitur semper.</div>
 
         </div>
     </section>
-</div>
 
 <!-- </section> -->
    {/if}
