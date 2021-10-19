@@ -90,6 +90,12 @@ position: absolute;
     };
   }
 
+  export let width = Math.min(
+      document.getElementById('interactive').getBoundingClientRect().width,
+      1000
+  );
+
+
   onMount(async () => {
     mapboxgl.accessToken = accessToken;
 
@@ -295,7 +301,7 @@ mapRef.addSource('multiple-lines-route', {
 
 
           if(marker.id === 1 ||marker.id === 4 || marker.id === 7 || marker.id === 9){
-             el.style.backgroundImage = "url('https://img.icons8.com/officel/80/000000/marker.png')";
+              el.style.backgroundImage = "url('//news.northeastern.edu/interactive/2021/09/fresh-truck/images/marker_red_web.png')";
           // document.createElement('div').style.transform  = "transform: translate(-50%, -50%) translate(441px, 305px) rotateX(180deg) rotateZ(180deg);";
 
                 // el.style.width= "55px";
@@ -304,7 +310,8 @@ mapRef.addSource('multiple-lines-route', {
 
           }
           else{
-          el.style.backgroundImage = "url('https://img.icons8.com/ultraviolet/40/000000/marker.png')";
+          el.style.backgroundImage = "url('//news.northeastern.edu/interactive/2021/09/fresh-truck/images/marker_blue_web.png')";
+
             // el.style.width= "55px";
             // el.style.height = "65px";
 
@@ -532,19 +539,38 @@ if(newActiveMapItem <= 9){
   });
 }
 else{
-  mapRef.flyTo({
-    // center: listItems[newActiveMapItem].coordinates,
-    center: [-71.0589, 42.32061],
-    zoom: 11
-    // bearing: 0
-//
-//     // These options control the flight curve, making it move
-// // slowly and zoom out almost completely before starting
-// // to pan.
-// speed: 0.8, // make the flying slow
-// curve: 1 // change the speed at which it zooms out
 
-  });
+if(width < 600){
+    mapRef.flyTo({
+      // center: listItems[newActiveMapItem].coordinates,
+      center: [-71.06985120011647,42.32425222586346],
+      zoom: 13
+      // bearing: 0
+  //
+  //     // These options control the flight curve, making it move
+  // // slowly and zoom out almost completely before starting
+  // // to pan.
+  // speed: 0.8, // make the flying slow
+  // curve: 1 // change the speed at which it zooms out
+
+    });
+}
+else{
+    mapRef.flyTo({
+      // center: listItems[newActiveMapItem].coordinates,
+      center: [-71.0589, 42.32061],
+      zoom: 11
+      // bearing: 0
+  //
+  //     // These options control the flight curve, making it move
+  // // slowly and zoom out almost completely before starting
+  // // to pan.
+  // speed: 0.8, // make the flying slow
+  // curve: 1 // change the speed at which it zooms out
+
+    });
+}
+
 }
 // }
 // else{

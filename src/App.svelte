@@ -22,6 +22,7 @@
 src = "//news.northeastern.edu/interactive/2020/10/campus-construction-2020/photos/"+dataset[10].id+".jpg";
 
 
+
 	// export let width = Math.min(
 	// 	document.getElementById('interactive').getBoundingClientRect().width,
 	// 	1000
@@ -62,7 +63,7 @@ src = "//news.northeastern.edu/interactive/2020/10/campus-construction-2020/phot
 .container {
   /* height: 100vh; */
   display: flex;
-  flex-flow: wrap-reverse;
+  flex-wrap: wrap-reverse;
   /* overflow-y: hidden; */
    margin: 0;
    max-width: 100%;
@@ -98,12 +99,12 @@ src = "//news.northeastern.edu/interactive/2020/10/campus-construction-2020/phot
   /* max-height: auto; */
 
   position: sticky;
-  top: 0;
+  top:  var(--article-progress--height);
 
   align-self: flex-end;
-  --article-progress--height: 62px;
+  --article-progress--height: 30px;
     max-height: calc(100vh - var(--article-progress--height));
-    align-self: flex-end;
+    /* align-self: flex-end; */
   /* --article-progress--width:62px;
    max-height: calc(100vh - var(--article-progress--width));
    position: sticky;
@@ -224,6 +225,10 @@ margin: 10px 10px 0;
 
 @media (max-width: 750px) {
 
+.container{
+  flex-wrap: wrap;
+
+}
   .legendCells{
     margin: 4px 4px 4px 0;
   }
@@ -231,14 +236,31 @@ margin: 10px 10px 0;
 	.left {
 		width: 100%;
 		z-index: 0;
-		height: 60vh;
+
+    /* --article-progress--height: 30px;
+    margin-top: var(--article-progress--height);  */
+    /* top:  var(--article-progress--height); */
+
+    /* align-self: flex-end; */
+
+      /* max-height: calc(100vh - var(--article-progress--height)); */
+		/* height: 60vh; */
+		/* position: sticky; */
+		/* top:  var(--article-progress--height);
+
+		align-self: flex-end;
+		--article-progress--height: 30px;
+		  max-height: calc(100vh - var(--article-progress--height));
+		  align-self: flex-end; */
+      /* margin-top: 30px; */
 
 	}
 
 	.right{
 		width: 100%;
-		max-height: 40vh;
-
+		max-height: 25vh;
+    bottom: 0;
+	display: none;
 	}
 
 	.pane {

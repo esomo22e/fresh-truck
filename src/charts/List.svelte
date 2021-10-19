@@ -13,6 +13,10 @@
     display: none;
 }
 
+#list-item-10 .list-content{
+    max-width: 31rem;
+
+}
 
   img {
     width: 100%;
@@ -191,7 +195,7 @@ video{
       padding: 10px;
     } */
     .list-item:last-child{
-        margin-bottom: 200px;
+        /* margin-bottom: 200px; */
         border-bottom: none;
       }
 
@@ -252,7 +256,7 @@ line-height: 1.25em;
 
   onMount(async () => {
     // Set a nicer offset so it's not a hard cutoff
-    inView.offset(200);
+    inView.offset(100);
 
     window.addEventListener('scroll', function() {
       // Active list item is top-most fully-visible item
@@ -294,7 +298,21 @@ line-height: 1.25em;
     <section class="list-item" id="list-item-{index}">
 
     {#if listItem.video === ""}
-    <img src="{listItem.image}" alt="{listItem.name}"  class = "img-list"/>
+    <!-- <img src="{listItem.image}" alt="{listItem.name}"  class = "img-list"/> -->
+    <!-- <img src="//news.northeastern.edu/interactive/2021/09/fresh-truck/images/fresh_truck_img_1_web.jpg" alt="{listItem.name}"  class = "img-list"/> -->
+    <!-- <img srcset="//news.northeastern.edu/interactive/2021/09/fresh-truck/images/fresh_truck_img_1_0.5x_web.jpg 600w,
+                //news.northeastern.edu/interactive/2021/09/fresh-truck/images/fresh_truck_img_1_0.75x_web.jpg 900w"
+                sizes="(max-width: 750px) 600px,
+                900px"
+                src="//news.northeastern.edu/interactive/2021/09/fresh-truck/images/fresh_truck_img_1_web.jpg"
+    alt="{listItem.name}"  class = "img-list"/> -->
+
+    <img srcset="{listItem.image_mobile} 600w,
+                {listItem.image_desktop} 901w"
+                sizes="(max-width: 750px) 600px,
+                901px"
+                src="{listItem.image_original}"
+    alt="{listItem.name}"  class = "img-list"/>
     <div class = "list-content">
     <div class = "list-title">{listItem.name}</div>
     <div class = "list-day">{listItem.day}</div>
@@ -328,11 +346,18 @@ line-height: 1.25em;
 
     <!-- <section class="list-item-wrapper" id="list-item-{index}"> -->
   <section class="list-item" id="list-item-{index}">
-  <img src="//news.northeastern.edu/interactive/2021/09/fresh-truck/images/fresh_truck_img_7.JPG" alt=""  class = "img-list"/>
+  <!-- <img src="{listItem.image_original}" alt=""  class = "img-list"/> -->
+  <img srcset="{listItem.image_mobile} 600w,
+              {listItem.image_desktop} 901w"
+              sizes="(max-width: 750px) 600px,
+              901px"
+              src="{listItem.image_original}"
+  alt="{listItem.name}"  class = "img-list"/>
+
 
         <div class="list-content">
 
-        <div class = "list-desc"><a href="https://www.w3.org/">Fresh Truck Mobile Market</a> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sagittis interdum sodales. Curabitur urna nunc, accumsan id leo sit amet, fringilla eleifend mauris. Ut in sagittis nibh. Donec scelerisque, quam eu ultrices congue, tellus turpis gravida eros, eget interdum massa mauris nec leo. Nunc vel magna nec odio efficitur semper.</div>
+        <div class = "list-desc">For more information on Fresh Truck and the Mobile Market route schedule, visit  <a href="https://www.aboutfresh.org/fresh-truck/"> www.aboutfresh.org/fresh-truck</a>.</div>
 
         </div>
     </section>
