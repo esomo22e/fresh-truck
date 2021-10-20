@@ -299,11 +299,23 @@ function displayWindowSize() {
     {#if listItem.video === ""}
 
     <picture>
+     <!-- load webp in different sizes if browser supports it -->
       <source type = "image/webp" media="(max-width: 750px)" srcset="{listItem.image_mobile}">
       <source type = "image/webp" media="(min-width: 751px)" srcset="{listItem.image_desktop}">
       <!-- <source media="(min-width: 901px)" srcset="{listItem.image_original}"> -->
 
-        <img src="{listItem.image_desktop}" alt="{listItem.name}" class = "img-list">
+<!-- load jpg in different sizes if browser doesn't support webp -->
+<source type = "image/jpeg" media="(max-width: 750px)" srcset="{listItem.image_mobile_jpg}">
+<source type = "image/jpeg" media="(min-width: 751px)" srcset="{listItem.image_desktop_jpg}">
+
+<!-- fallback in different sizes, as well as regular src. -->
+<img srcset="{listItem.image_mobile_jpg} 600w,
+            {listItem.image_desktop_jpg} 901w"
+            sizes="(max-width: 750px) 600px,
+            901px"
+            src="{listItem.image_original_jpg}"
+alt="{listItem.name}"  class = "img-list"/>
+        <!-- <img src="{listItem.image_desktop}" alt="{listItem.name}" class = "img-list"> -->
     </picture>
     <!-- <img srcset="{listItem.image_mobile} 600w,
                 {listItem.image_desktop} 901w"
@@ -340,11 +352,23 @@ function displayWindowSize() {
               src="{listItem.image_original}"
   alt="{listItem.name}"  class = "img-list"/> -->
   <picture>
-    <source media="(max-width: 750px)" srcset="{listItem.image_mobile}">
-    <source media="(min-width: 751px)" srcset="{listItem.image_desktop}">
+   <!-- load webp in different sizes if browser supports it -->
+    <source type = "image/webp" media="(max-width: 750px)" srcset="{listItem.image_mobile}">
+    <source type = "image/webp" media="(min-width: 751px)" srcset="{listItem.image_desktop}">
     <!-- <source media="(min-width: 901px)" srcset="{listItem.image_original}"> -->
 
-      <img src="{listItem.image_desktop}" alt="{listItem.name}" class = "img-list">
+<!-- load jpg in different sizes if browser doesn't support webp -->
+<source type = "image/jpeg" media="(max-width: 750px)" srcset="{listItem.image_mobile_jpg}">
+<source type = "image/jpeg" media="(min-width: 751px)" srcset="{listItem.image_desktop_jpg}">
+
+<!-- fallback in different sizes, as well as regular src. -->
+<img srcset="{listItem.image_mobile_jpg} 600w,
+          {listItem.image_desktop_jpg} 901w"
+          sizes="(max-width: 750px) 600px,
+          901px"
+          src="{listItem.image_original_jpg}"
+alt="{listItem.name}"  class = "img-list"/>
+      <!-- <img src="{listItem.image_desktop}" alt="{listItem.name}" class = "img-list"> -->
   </picture>
 
         <div class="list-content">

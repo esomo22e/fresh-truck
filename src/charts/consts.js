@@ -35,6 +35,9 @@ export const listItems = [
             image_desktop: '//news.northeastern.edu/interactive/2021/09/fresh-truck/images/fresh_truck_img_1_0.75x_web.webp',
             image_mobile: '//news.northeastern.edu/interactive/2021/09/fresh-truck/images/fresh_truck_img_1_0.5x_web.webp',
             image_original: '//news.northeastern.edu/interactive/2021/09/fresh-truck/images/fresh_truck_img_1_web.webp',
+            image_desktop_jpg: '//news.northeastern.edu/interactive/2021/09/fresh-truck/images/fresh_truck_img_1_0.75x_web.jpg',
+            image_mobile_jpg: '//news.northeastern.edu/interactive/2021/09/fresh-truck/images/fresh_truck_img_1_0.5x_web.jpg',
+            image_original_jpg: '//news.northeastern.edu/interactive/2021/09/fresh-truck/images/fresh_truck_img_1_web.jpg',
             video: '',
             time: ''
         },
@@ -47,6 +50,9 @@ export const listItems = [
             image_desktop: '//news.northeastern.edu/interactive/2021/09/fresh-truck/images/fresh_truck_img_2_0.75x_web.webp',
             image_mobile: '//news.northeastern.edu/interactive/2021/09/fresh-truck/images/fresh_truck_img_2_0.5x_web.webp',
             image_original: '//news.northeastern.edu/interactive/2021/09/fresh-truck/images/fresh_truck_img_2_web.webp',
+            image_desktop_jpg: '//news.northeastern.edu/interactive/2021/09/fresh-truck/images/fresh_truck_img_2_0.75x_web.jpg',
+            image_mobile_jpg: '//news.northeastern.edu/interactive/2021/09/fresh-truck/images/fresh_truck_img_2_0.5x_web.jpg',
+            image_original_jpg: '//news.northeastern.edu/interactive/2021/09/fresh-truck/images/fresh_truck_img_2_web.jpg',
             video: '',
             time: ''
         }
@@ -70,6 +76,9 @@ export const listItems = [
                 image_desktop: '//news.northeastern.edu/interactive/2021/09/fresh-truck/images/fresh_truck_img_3_0.75x_web.webp',
                 image_mobile: '//news.northeastern.edu/interactive/2021/09/fresh-truck/images/fresh_truck_img_3_0.5x_web.webp',
                 image_original: '//news.northeastern.edu/interactive/2021/09/fresh-truck/images/fresh_truck_img_3_web.webp',
+                image_desktop_jpg: '//news.northeastern.edu/interactive/2021/09/fresh-truck/images/fresh_truck_img_3_0.75x_web.jpg',
+                image_mobile_jpg: '//news.northeastern.edu/interactive/2021/09/fresh-truck/images/fresh_truck_img_3_0.5x_web.jpg',
+                image_original_jpg: '//news.northeastern.edu/interactive/2021/09/fresh-truck/images/fresh_truck_img_3_web.jpg',
                 video: '',
                 time: ''
             },
@@ -82,6 +91,9 @@ export const listItems = [
                 image_desktop: '//news.northeastern.edu/interactive/2021/09/fresh-truck/images/fresh_truck_img_4_0.75x_web.webp',
                 image_mobile: '//news.northeastern.edu/interactive/2021/09/fresh-truck/images/fresh_truck_img_4_0.5x_web.webp',
                 image_original: '//news.northeastern.edu/interactive/2021/09/fresh-truck/images/fresh_truck_img_4_web.webp',
+                image_desktop_jpg: '//news.northeastern.edu/interactive/2021/09/fresh-truck/images/fresh_truck_img_4_0.75x_web.jpg',
+                image_mobile_jpg: '//news.northeastern.edu/interactive/2021/09/fresh-truck/images/fresh_truck_img_4_0.5x_web.jpg',
+                image_original_jpg: '//news.northeastern.edu/interactive/2021/09/fresh-truck/images/fresh_truck_img_4_web.jpg',
                 video: '',
                 time: ''
             },
@@ -104,6 +116,9 @@ export const listItems = [
                 image_desktop: '//news.northeastern.edu/interactive/2021/09/fresh-truck/images/fresh_truck_img_5_0.75x_web.webp',
                 image_mobile: '//news.northeastern.edu/interactive/2021/09/fresh-truck/images/fresh_truck_img_5_0.5x_web.webp',
                 image_original: '//news.northeastern.edu/interactive/2021/09/fresh-truck/images/fresh_truck_img_5_web.webp',
+                image_desktop_jpg: '//news.northeastern.edu/interactive/2021/09/fresh-truck/images/fresh_truck_img_5_0.75x_web.jpg',
+                image_mobile_jpg: '//news.northeastern.edu/interactive/2021/09/fresh-truck/images/fresh_truck_img_5_0.5x_web.jpg',
+                image_original_jpg: '//news.northeastern.edu/interactive/2021/09/fresh-truck/images/fresh_truck_img_5_web.jpg',
                 video: '',
                 time: ''
             },
@@ -126,6 +141,9 @@ export const listItems = [
                 image_desktop: '//news.northeastern.edu/interactive/2021/09/fresh-truck/images/fresh_truck_img_6_0.75x_web.webp',
                 image_mobile: '//news.northeastern.edu/interactive/2021/09/fresh-truck/images/fresh_truck_img_6_0.5x_web.webp',
                 image_original: '//news.northeastern.edu/interactive/2021/09/fresh-truck/images/fresh_truck_img_6_web.webp',
+                image_desktop_jpg: '//news.northeastern.edu/interactive/2021/09/fresh-truck/images/fresh_truck_img_6_0.75x_web.jpg',
+                image_mobile_jpg: '//news.northeastern.edu/interactive/2021/09/fresh-truck/images/fresh_truck_img_6_0.5x_web.jpg',
+                image_original_jpg: '//news.northeastern.edu/interactive/2021/09/fresh-truck/images/fresh_truck_img_6_web.jpg',
                 video: '',
                 time: ''
             },
@@ -138,6 +156,9 @@ export const listItems = [
                     image_desktop: '//news.northeastern.edu/interactive/2021/09/fresh-truck/images/fresh_truck_img_7_0.75x_web.webp',
                     image_mobile: '//news.northeastern.edu/interactive/2021/09/fresh-truck/images/fresh_truck_img_7_0.5x_web.webp',
                     image_original: '//news.northeastern.edu/interactive/2021/09/fresh-truck/images/fresh_truck_img_7_web.webp',
+                    image_desktop_jpg: '//news.northeastern.edu/interactive/2021/09/fresh-truck/images/fresh_truck_img_7_0.75x_web.jpg',
+                    image_mobile_jpg: '//news.northeastern.edu/interactive/2021/09/fresh-truck/images/fresh_truck_img_7_0.5x_web.jpg',
+                    image_original_jpg: '//news.northeastern.edu/interactive/2021/09/fresh-truck/images/fresh_truck_img_7_web.jpg',
                     video: '',
                     time: ''
                 }
