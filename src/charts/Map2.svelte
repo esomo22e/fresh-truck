@@ -2,7 +2,6 @@
   #map {
     width: 100%;
     height: 100%;
-    /* overflow: hidden; */
     overflow-y: hidden;
   }
 
@@ -20,8 +19,7 @@
 
   :global(.marker) {
       background-size:cover;
-      /* color: red; */
-      /* border:2px solid black; */
+
       width: 50px;
     height: 50px;
       border-radius: 50%;
@@ -30,21 +28,6 @@
        top: 0;
        left: 0;
        will-change: transform;
-      /* z-index: 1 */
-
-      /* justify-content:space-evenly;
-align-items:center;
-box-sizing:border-box; */
-/* width: 30px;
-height: 30px; */
-/* color:#fff;
-background: #693;
-border:solid 2px;
-
-box-shadow:0 0 2px #000;
-cursor: pointer; */
-/* transform-origin:0 0; */
-/* transform: rotate(100deg); */
 position: absolute;
  top: 0;
  left: 0;
@@ -52,9 +35,6 @@ position: absolute;
 
  transform: translateX(10px) rotate(100deg) translateY(5px);
 
-
- /* transform: translate(-50%, -50%) translate(277px, 486px) rotateX(
- 0deg) ; */
     }
 
 
@@ -113,11 +93,8 @@ interactive: false
     });
 
 
-    console.log(listItems)
     let feat = listItems.map(generateFeature);
-    console.log(feat)
 
-console.log()
 
     mapRef.on('load', function() {
 
@@ -260,33 +237,7 @@ mapRef.addSource('multiple-lines-route', {
 
 
 
-// mapRef.on('mousemove', 'routes', (e) => {
-//   if (e.features.length > 0) {
-//     if (hoveredStateId !== null) {
-//         mapRef.setFeatureState(
-//         { source: 'multiple-lines-route', id: hoveredStateId },
-//         { hover: false }
-//         );
-//     }
-//         hoveredStateId = e.features[0].id;
-//
-//         mapRef.setFeatureState(
-//         { source: 'multiple-lines-route', id: hoveredStateId },
-//         { hover: true }
-//         );
-//   }
-// });
-//
-// mapRef.on('mouseleave', 'routes', () => {
-// if (hoveredStateId !== null) {
-//       mapRef.setFeatureState(
-//       { source: 'multiple-lines-route', id: hoveredStateId },
-//       { hover: false }
-// );
-// }
-// hoveredStateId = null;
-//
-// });
+
 
 
       listItems.forEach(function(marker, i) {
@@ -301,25 +252,18 @@ mapRef.addSource('multiple-lines-route', {
 
 
           if(marker.id === 1 ||marker.id === 4 || marker.id === 7 || marker.id === 9){
-              el.style.backgroundImage = "url('//news.northeastern.edu/interactive/2021/09/fresh-truck/images/marker_red_web.png')";
-          // document.createElement('div').style.transform  = "transform: translate(-50%, -50%) translate(441px, 305px) rotateX(180deg) rotateZ(180deg);";
+              el.style.backgroundImage = " url('//news.northeastern.edu/interactive/2021/09/fresh-truck/images/marker_red_web.webp')";
 
-                // el.style.width= "55px";
-                // el.style.height = "65px";
 
 
           }
           else{
-          el.style.backgroundImage = "url('//news.northeastern.edu/interactive/2021/09/fresh-truck/images/marker_blue_web.png')";
+          el.style.backgroundImage = "url('//news.northeastern.edu/interactive/2021/09/fresh-truck/images/marker_blue_web.webp')";
 
-            // el.style.width= "55px";
-            // el.style.height = "65px";
 
-            // el.style.backgroundImage = "url('//news.northeastern.edu/interactive/2020/10/campus-construction-2020/photos/" + marker.id + ".jpg')";
-            var desc =  document.getElementById("map-cont");
+            // var desc =  document.getElementById("map-cont");
 
-            // desc.style.backgroundColor = "red";
-            // desc.style.zIndex = 0;
+
           }
           new mapboxgl.Marker(el)
            .setLngLat(feat[i].geometry.coordinates)
@@ -327,9 +271,6 @@ mapRef.addSource('multiple-lines-route', {
           // el.dataset.placeid = marker.id;
       });
 
-//       new mapboxgl.Marker()
-// .setLngLat([-71.087433, 42.32061])
-// .addTo(mapRef);
 
       // When clicking on a map marker
       // Add markers to map
@@ -358,11 +299,6 @@ mapRef.addSource('multiple-lines-route', {
         const match = features[0];
         const coordinates = match.geometry.coordinates.slice();
 
-        // // Show popup
-        // new mapboxgl.Popup()
-        //   .setLngLat(coordinates)
-        //   .setHTML(match.properties.description)
-        //   .addTo(mapRef);
 
         // Set new active list item
         activeListItem.set(match.properties.id);
@@ -381,9 +317,6 @@ mapRef.addSource('multiple-lines-route', {
   // Update map center when active list item is updated via list
   const unsubscribeActiveMapItem = activeMapItem.subscribe(newActiveMapItem => {
 
-    console.log(newActiveMapItem)
-
-    console.log(listItems[newActiveMapItem].day)
     if(listItems[newActiveMapItem].day === "Monday" ||  listItems[newActiveMapItem].day === "Monday, Saturday"){
     mapRef.setFeatureState(
 { source: 'multiple-lines-route', id: 1 },
@@ -521,7 +454,6 @@ else{
 
 
 
-console.log(newActiveMapItem)
 
 
 if(newActiveMapItem <= 9){
@@ -544,7 +476,7 @@ if(width < 600){
     mapRef.flyTo({
       // center: listItems[newActiveMapItem].coordinates,
       center: [-71.06985120011647,42.32425222586346],
-      zoom: 13
+      zoom: 11
       // bearing: 0
   //
   //     // These options control the flight curve, making it move

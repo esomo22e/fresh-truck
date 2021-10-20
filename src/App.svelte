@@ -4,7 +4,6 @@
 	// import GraphicFooter from './components/GraphicFooter.svelte'
 	import * as colors from './helpers/colors.js'
 
-	import Map from './charts/Map.svelte'
 
 	import Map2 from './charts/Map2.svelte'
 	import List from './charts/List.svelte';
@@ -237,22 +236,7 @@ margin: 10px 10px 0;
 		width: 100%;
 		z-index: 0;
 
-    /* --article-progress--height: 30px;
-    margin-top: var(--article-progress--height);  */
-    /* top:  var(--article-progress--height); */
 
-    /* align-self: flex-end; */
-
-      /* max-height: calc(100vh - var(--article-progress--height)); */
-		/* height: 60vh; */
-		/* position: sticky; */
-		/* top:  var(--article-progress--height);
-
-		align-self: flex-end;
-		--article-progress--height: 30px;
-		  max-height: calc(100vh - var(--article-progress--height));
-		  align-self: flex-end; */
-      /* margin-top: 30px; */
 
 	}
 
@@ -271,131 +255,10 @@ margin: 10px 10px 0;
 		bottom: 0;
 	}
 }
-/* #interactiveContainer {
-		height:100vh;
-		display: flex; */
-		/* margin-bottom:50vh; */
-		/* display: grid;
-		grid-template-columns: 1fr;
-		grid-template-rows: 40% 25% 35%;
-		gap: 0px 0px;
-		grid-template-areas:
-		"map-map"
-		"map-nav"
-		"map-info"; */
-	/* } */
-	/* :global(#interactiveContainer div) {
-		margin-top: 0;
-	}
-	.map-info {
-		grid-area: map-info;
-z-index: 100;
-background-color: #fff;
-width: 60%;
-height: auto;
-top: 40px;
-left: 40px;
-border-radius: 20px;
-
-
-	}
-	/* .map-nav { grid-area: map-nav; } */
-	/* .map-map {
-
-		grid-area: map-map;
-		width: 40%;
-
-	}
-
-	.map-img{
-		width: 100%;
-		height: 100%;
-		margin: 0;
-
-
-	}
-
-	.img-cont{
-		margin: 0;
-	}
-
-	.map-content{
-		position:absolute;
-		color: #fff;
-		z-index:100;
-	} */
-	/* .map-nav {
-		padding-right:0;
-	}
-	.map-nav button {
-		display:inline-block;
-		width: 31%;
-		height:44px;
-		float:left;
-		background-color: #efefef;
-		border:1px solid #999;
-		border-radius:2px;
-		margin:0 0.2rem 0.2rem;
-		cursor:pointer;
-		padding:0.2rem;
-		white-space: inherit;
-	}
-	.map-nav button:hover {
-		background-color: #eaeaea;
-	}
-	.map-nav button:active, .map-nav button:focus {
-		background-color: #ddd;
-		border:2px solid #999;
-	}
-	.map-map {
-		position: relative;
-	  height: 100% !important;
-	  width: 60% !important;
-	  overflow:hidden;
-	}
-	span.map-item-title {
-		font-size:1.15rem;
-		font-weight:bold;
-		display:block;
-		text-transform:uppercase;
-		margin:0.5rem 0 0.5rem 0;
-	}
-	p.map-item-desc {
-		margin-top:0;
-		font-size:0.85rem;
-	} */
-	/* @media screen and (min-width:600px) {
-		#interactiveContainer {
-			height: 100vh;
-			margin-bottom:2rem;
-			display: grid;
-		   grid-template-columns: 25% 75%;
-		   grid-template-rows: 3fr 1fr;
-		   gap: 0px 0px;
-		   grid-template-areas:
-		    "map-nav map-map"
-		    "map-info map-info";
-		}
-		span.map-item-title {
-			font-size:1.5rem;
-		}
-		p.map-item-desc {
-			font-size:1rem;
-		}
-		.map-nav button {
-			display:block;
-			width: 100%;
-			height:unset;
-			float:unset;
-			text-align:left;
-			margin:0 0 0.5rem 0;
-			padding:0.25rem;
-		}
-	} */
 
 </style>
 <div class="container">
-  <div class="pane left">
+  <div class="pane left" >
 
     <List />
 
@@ -422,70 +285,10 @@ border-radius: 20px;
 	<div class="cell-label">Wednesday</div>
 
   </div>
-  <!-- <div class="legendCells">
-	<div id = "cell-square" class="cell4"></div>
-	<div class="cell-label">Thursday</div>
 
-  </div>
-  <div class="legendCells">
-	<div id = "cell-square" class="cell5"></div>
-	<div class="cell-label">Friday</div>
-
-  </div>
-  <div class="legendCells">
-	<div id = "cell-square" class="cell6"></div>
-	<div class="cell-label">Saturday</div>
-
-  </div> -->
 </div>
 	</div>
 
 	    <Map2 />
-	<!-- <div class="marker mapboxgl-marker mapboxgl-marker-anchor-center" style="transform: translate(-50%, -50%) translate(277px, 486px) rotateX(0deg) rotateZ(0deg);"><span><b>1</b></span></div> -->
   </div>
 </div>
-<!-- {#if dataset.length > 0} -->
-<!-- <div id="interactiveContainer"> -->
-
-<!-- {#each dataset as books} -->
-
-
-<!-- {active.id} -->
-
-  <!-- <div class="map-info" >
-  <div class = "map-content">
-	  	<span class="map-item-title">{active.name}</span>
-  		<p class="map-item-desc">{active.description}</p>
-		</div>
-		<div class = "map-img">
-		<img src={"//news.northeastern.edu/interactive/2020/10/campus-construction-2020/photos/"+active.id+".jpg"} class = "img-cont" width = "100%" height = "100%" alt="red">
-
-		</div>
-  </div> -->
-  <!-- <div class="map-nav">
-	  {#each dataset as place}
-		  <button
-		  		data-place={place.id}
-				on:click={() =>
-					handleClick(place)
-				}
-			>
-			  {place.name}
-		  </button>
-	  {/each}
-  </div> -->
-  <!-- <div class="map-map">
-	  <Map
-		  zoom={11.25}
-
-		  centerlnglat={[-71.087433, 42.32061]}
-		  pitch={0}
-		  bearing={0}
-		  data={dataset}
-		  bind:active={active}
-	  />
-  </div> -->
-	<!-- {/each} -->
-	<!-- </div> -->
-
-<!-- {/if} -->

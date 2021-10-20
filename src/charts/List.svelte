@@ -121,46 +121,11 @@ video{
     color: #ffd700;
   }
 
-  /* .red-line {
-  background:#FF4949;
-  z-index:-1;
-  width:5px;
-  height:100%;
-  position:absolute;
-  left:15px;
-}
+  .img-list{
+    max-width: 100%;
+  }
 
-.list-wrapper {
-  position:relative;
-  width: 100%;
-}
-.list-item-wrapper {
-  margin-top:10px;
-  position:relative;
-}
-.list-bullet {
-  float:left;
-  margin-right:20px;
-  background:#FF4949;
-  height:30px;
-  width:30px;
-  line-height:30px;
-  border-radius:100px;
-  font-weight:700;
-  color:white;
-  text-align:center;
-}
 
-.list-title {
-    font-weight:700;
-}
-.list-text {
-    font-weight:400;
-} */
-
-  /* .wrapper{
-    padding: 0 40px;
-  } */
   @media (max-width: 1250px) {
     .list-title{
 
@@ -254,24 +219,58 @@ line-height: 1.25em;
   // Define the ref
   let listRef;
 
+
   onMount(async () => {
+
     // Set a nicer offset so it's not a hard cutoff
     inView.offset(100);
 
-    window.addEventListener('scroll', function() {
-      // Active list item is top-most fully-visible item
-      const visibleListItems = Array.from(
-        document.getElementsByClassName('list-item')
-      ).map(inView.is);
 
 
-      // If it's a new one, update active list item
-      const topMostVisible = visibleListItems.indexOf(true);
-      if (topMostVisible !== -1) {
-        activeMapItem.set(topMostVisible);
-      }
+window.onresize = displayWindowSize;
+window.onload = displayWindowSize;
+function displayWindowSize() {
+    let myWidth = window.innerWidth;
+    // let  myHeight = window.innerHeight;
+    // your size calculation code here
+    // document.getElementById("interactive").innerHTML = myWidth + "x" + myHeight;
 
-    });
+
+// console.log(myWidth)
+    if(myWidth > 750){
+        window.addEventListener('scroll', function() {
+          // Active list item is top-most fully-visible item
+          const visibleListItems = Array.from(
+            document.getElementsByClassName('list-item')
+          ).map(inView.is);
+
+
+          // If it's a new one, update active list item
+          const topMostVisible = visibleListItems.indexOf(true);
+          if (topMostVisible !== -1) {
+            activeMapItem.set(topMostVisible);
+          }
+
+        });
+    }
+    else{
+        window.removeEventListener('scroll', function() {
+          // Active list item is top-most fully-visible item
+          const visibleListItems = Array.from(
+            document.getElementsByClassName('list-item')
+          ).map(inView.is);
+
+
+          // If it's a new one, update active list item
+          const topMostVisible = visibleListItems.indexOf(true);
+          if (topMostVisible !== -1) {
+            activeMapItem.set(topMostVisible);
+          }
+
+        });
+    }
+    };
+
   });
 
   // Update list scroll position when active list item is updated via map
@@ -298,21 +297,20 @@ line-height: 1.25em;
     <section class="list-item" id="list-item-{index}">
 
     {#if listItem.video === ""}
-    <!-- <img src="{listItem.image}" alt="{listItem.name}"  class = "img-list"/> -->
-    <!-- <img src="//news.northeastern.edu/interactive/2021/09/fresh-truck/images/fresh_truck_img_1_web.jpg" alt="{listItem.name}"  class = "img-list"/> -->
-    <!-- <img srcset="//news.northeastern.edu/interactive/2021/09/fresh-truck/images/fresh_truck_img_1_0.5x_web.jpg 600w,
-                //news.northeastern.edu/interactive/2021/09/fresh-truck/images/fresh_truck_img_1_0.75x_web.jpg 900w"
-                sizes="(max-width: 750px) 600px,
-                900px"
-                src="//news.northeastern.edu/interactive/2021/09/fresh-truck/images/fresh_truck_img_1_web.jpg"
-    alt="{listItem.name}"  class = "img-list"/> -->
 
-    <img srcset="{listItem.image_mobile} 600w,
+    <picture>
+      <source type = "image/webp" media="(max-width: 750px)" srcset="{listItem.image_mobile}">
+      <source type = "image/webp" media="(min-width: 751px)" srcset="{listItem.image_desktop}">
+      <!-- <source media="(min-width: 901px)" srcset="{listItem.image_original}"> -->
+
+        <img src="{listItem.image_desktop}" alt="{listItem.name}" class = "img-list">
+    </picture>
+    <!-- <img srcset="{listItem.image_mobile} 600w,
                 {listItem.image_desktop} 901w"
                 sizes="(max-width: 750px) 600px,
                 901px"
                 src="{listItem.image_original}"
-    alt="{listItem.name}"  class = "img-list"/>
+    alt="{listItem.name}"  class = "img-list"/> -->
     <div class = "list-content">
     <div class = "list-title">{listItem.name}</div>
     <div class = "list-day">{listItem.day}</div>
@@ -332,28 +330,22 @@ line-height: 1.25em;
        {/if}
     </section>
     {:else}
-    <!-- <section class="list-item" id="list-item-text-{index}" >
-    <div class="red-line"></div>
-    <div class="list-bullet">1</div>
 
-    <div class = "list-content">
-    <div class = "list-title">{listItem.name}</div>
-    <div class = "list-day">{listItem.day}</div>
-      <div class = "list-desc">{listItem.description}</div>
-      </div>
-    </section> -->
-    <!-- <section class="list-item" id="list-item-text-{index}" > -->
-
-    <!-- <section class="list-item-wrapper" id="list-item-{index}"> -->
   <section class="list-item" id="list-item-{index}">
   <!-- <img src="{listItem.image_original}" alt=""  class = "img-list"/> -->
-  <img srcset="{listItem.image_mobile} 600w,
+  <!-- <img srcset="{listItem.image_mobile} 600w,
               {listItem.image_desktop} 901w"
               sizes="(max-width: 750px) 600px,
               901px"
               src="{listItem.image_original}"
-  alt="{listItem.name}"  class = "img-list"/>
+  alt="{listItem.name}"  class = "img-list"/> -->
+  <picture>
+    <source media="(max-width: 750px)" srcset="{listItem.image_mobile}">
+    <source media="(min-width: 751px)" srcset="{listItem.image_desktop}">
+    <!-- <source media="(min-width: 901px)" srcset="{listItem.image_original}"> -->
 
+      <img src="{listItem.image_desktop}" alt="{listItem.name}" class = "img-list">
+  </picture>
 
         <div class="list-content">
 
@@ -367,53 +359,5 @@ line-height: 1.25em;
     {/each}
 
 
-  <!-- <GraphicFooter
-  	source={'<a href="https://www.aboutfresh.org/fresh-truck/">Fresh Truck Mobile Market</a>'}
-  	credit={'Eunice/Northeastern University'}
-  /> -->
 
-  <!-- <div class="tail">
-  <div class = "tail-content"></div>
-    <i>
-    This was made as part of a <a href="https://svelte.dev/">Svelte</a>
-
-    </i>
-  </div> -->
 </div>
-<!-- <div id="list-items" bind:this="{listRef}">
-<div class="intro">
-
-  <h1>Fresh Truck Roundtrip</h1>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-</div>
-
-  {#each listItems as listItem, index}
-
-    <div class="list-item" id="list-item-{index}">
-
-    {#if listItem.video === ""}
-    <img src="{listItem.image}" alt="{listItem.name}" />
-
-    <h2>{listItem.name}</h2>
-    <h3>{listItem.day}</h3>
-
-      {@html listItem.description}
-       {:else}
-       <video width="100%" height="70%" controls>
-        <source src="{listItem.video}" type="video/mp4">
-       </video>
-       <h2>{listItem.name}</h2>
-       <h3>{listItem.day}</h3>
-
-       {@html listItem.description}
-       	{/if}
-    </div>
-  {/each}
-  <div class="tail">
-    <i>
-      This was made as part of a <a href="https://svelte.dev/">Svelte</a>
-      tutorial on <a href="https://dev.to/bryce/an-interactive-scrolling-map-list-in-svelte-34c3">dev.to</a>.
-      View source on <a href="https://gitlab.com/brycedorn/svelte-reactive-map-list">GitLab</a>.
-    </i>
-  </div>
-</div> -->
