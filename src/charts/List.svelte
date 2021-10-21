@@ -200,9 +200,6 @@ line-height: 1.25em;
 
   }
 
-  /* .tail-content{
-    height: 300px;
-  } */
 
   }
 
@@ -231,12 +228,7 @@ window.onresize = displayWindowSize;
 window.onload = displayWindowSize;
 function displayWindowSize() {
     let myWidth = window.innerWidth;
-    // let  myHeight = window.innerHeight;
-    // your size calculation code here
-    // document.getElementById("interactive").innerHTML = myWidth + "x" + myHeight;
 
-
-// console.log(myWidth)
     if(myWidth > 750){
         window.addEventListener('scroll', function() {
           // Active list item is top-most fully-visible item
@@ -344,13 +336,7 @@ alt="{listItem.name}"  class = "img-list"/>
     {:else}
 
   <section class="list-item" id="list-item-{index}">
-  <!-- <img src="{listItem.image_original}" alt=""  class = "img-list"/> -->
-  <!-- <img srcset="{listItem.image_mobile} 600w,
-              {listItem.image_desktop} 901w"
-              sizes="(max-width: 750px) 600px,
-              901px"
-              src="{listItem.image_original}"
-  alt="{listItem.name}"  class = "img-list"/> -->
+
   <picture>
    <!-- load webp in different sizes if browser supports it -->
     <source type = "image/webp" media="(max-width: 750px)" srcset="{listItem.image_mobile}">
@@ -368,7 +354,6 @@ alt="{listItem.name}"  class = "img-list"/>
           901px"
           src="{listItem.image_original_jpg}"
 alt="{listItem.name}"  class = "img-list"/>
-      <!-- <img src="{listItem.image_desktop}" alt="{listItem.name}" class = "img-list"> -->
   </picture>
 
         <div class="list-content">
@@ -378,7 +363,6 @@ alt="{listItem.name}"  class = "img-list"/>
         </div>
     </section>
 
-<!-- </section> -->
    {/if}
     {/each}
 

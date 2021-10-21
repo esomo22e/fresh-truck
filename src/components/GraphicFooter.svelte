@@ -51,9 +51,6 @@
    @media screen and (max-width: 750px) {
 
       #graphic-footer {
-         /* display: grid;
-         grid-column-gap: 5px;
-         grid-template-columns: 1fr; */
 
          margin-bottom: 350px;
       }
